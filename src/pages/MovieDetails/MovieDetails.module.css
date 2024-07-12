@@ -1,0 +1,65 @@
+/* MovieDetailsPage.module.css */
+.movieDetailsContainer {
+  display: flex;
+  margin: 20px;
+}
+
+.image {
+  width: 300px;
+  height: auto;
+  margin-right: 20px;
+}
+
+.movieDetailsWrap {
+  display: flex;
+  flex-direction: column;
+}
+
+.goBackLink:hover {
+  background-color: #0056b3;
+}
+
+.goBackLink {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 25px;
+  margin-left: 20px;
+  text-decoration: none;
+  width: 150px;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  border: none;
+}
+
+.addInfo {
+    border-top-style: double;
+    border-bottom-style: double;
+}
+
+.linkList {
+    display: flex;
+    list-style: none;
+    gap: 10px;
+}
+
+.link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  padding: 10px 10px;
+  width: 70px;
+  background-color: #007bff;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  border: none;
+}
+
+.link:hover {
+  background-color: #0056b3;
+}
