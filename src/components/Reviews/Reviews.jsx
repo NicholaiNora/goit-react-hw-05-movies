@@ -7,17 +7,16 @@ const Reviews = () => {
   const [reviews, setReviews] = useState([]);
   const [loading, setLoading] = useState(true);
 
-  const getMovieReviews = async () => {
-    try {
-      const fetchedMovieReviews = await fetchMovieReviews(movieId);
-      setReviews(fetchedMovieReviews);
-      setLoading(false);
-    } catch (error) {
-      console.log(error);
-    }
-  };
-
   useEffect(() => {
+    const getMovieReviews = async () => {
+      try {
+        const fetchedMovieReviews = await fetchMovieReviews(movieId);
+        setReviews(fetchedMovieReviews);
+        setLoading(false);
+      } catch (error) {
+        console.log(error);
+      }
+    };
     getMovieReviews();
   }, [movieId]);
 
