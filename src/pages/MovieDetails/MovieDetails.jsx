@@ -1,5 +1,5 @@
 import React, { useEffect, useState, Suspense } from 'react';
-import { useParams, Link, Outlet, useLocation } from 'react-router-dom';
+import { useParams, Link, Outlet, useLocation, useNavigate } from 'react-router-dom';
 import { fetchMovieDetails } from 'services/API';
 import css from './MovieDetails.module.css';
 
@@ -7,10 +7,11 @@ const MovieDetails = () => {
   const { movieId } = useParams();
   const [movieDetails, setMovieDetails] = useState(null);
   const [loading, setLoading] = useState(true);
+  const navigate = useNavigate()
 
   const location = useLocation();
 
-  const prevLocation = location.state.from;
+  const prevLocation = location.state?.from;
   const goBack = location.state?.from ?? '/movies';
 
   useEffect(() => {
@@ -21,6 +22,7 @@ const MovieDetails = () => {
         setLoading(false);
       } catch (error) {
         console.log(error);
+        navigate('*')
       }
     };
 
