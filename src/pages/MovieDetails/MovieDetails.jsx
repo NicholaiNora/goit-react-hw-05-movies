@@ -27,7 +27,7 @@ const MovieDetails = () => {
     };
 
     movieDetail();
-  }, [movieId]);
+  }, [movieId, navigate]);
 
   if (loading) {
     return <div>Loading...</div>;
